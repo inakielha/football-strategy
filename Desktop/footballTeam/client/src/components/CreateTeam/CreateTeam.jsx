@@ -11,39 +11,64 @@ import { CincoTresDos } from "./Formations/CincoTresDos"
 import CincoDosDosUno from "./Formations/CincoDosDosUno"
 import { useDispatch } from "react-redux"
 import { createTeam } from "../../redux/action"
+import naranja from "../../assets/naranja.png"
+import violeta from "../../assets/violeta.png"
+import verde from "../../assets/verde.png"
+import rojo from "../../assets/rojo.png"
+import blanco from "../../assets/blanco.png"
+import azul from "../../assets/azul.png"
+import aqua from "../../assets/aqua.png"
+import amarillo from "../../assets/amarillo.png"
+import negro from "../../assets/negro.png"
+
+import style from "./CreateTeam.module.css"
+import {Form} from "react-bootstrap";
+import InputGroup from 'react-bootstrap/InputGroup';
+
 
 
 export default function CreateTeam(){
     const dispatch = useDispatch()
     const [input, setInput] = useState({
-        teamName: "",
+        teamNames: "",
         formation:"4-3-3",
+        shirt: "blanco"
     })
+    const [active, setActive] = useState("blanco")
     function handleSelect(e) {
         setInput({
-            teamName: input.teamName,
+            teamNames: input.teamNames,
             formation: e.target.value
         })
     }
     function handleInput(e){
         setInput({
             ...input,
-            teamName: e.target.value
+            teamNames: e.target.value
         })
+    }
+    function handleShirt(e){
+        setInput({
+            ...input,
+            shirt: e.target.alt
+        })
+        setActive(e.target.alt)
+        // e.target.classList.toggle(style.active)
     }
     function handleSubmit(e){
         e.preventDefault();
         dispatch(createTeam(input))
-        console.log("hola")
+        console.log(input)
     }
+
     return(
-        <div>
+        <div className="container">
             <h3>Create Team </h3>
             <form onSubmit={(e)=> handleSubmit(e)}>
 
             <div>
-                <p>Formation</p>
-            <select onChange={(e)=>handleSelect(e)}>
+                <p  class ="container" >Formation</p>
+            <Form.Select aria-label="Default select example" onChange={(e)=>handleSelect(e)}>
                 <option>4-3-3</option>
                 <option>4-4-2</option>
                 <option>4-2-3-1</option>
@@ -55,22 +80,55 @@ export default function CreateTeam(){
                 <option>5-3-2</option>
                 <option>5-2-2-1</option>
                 
-            </select>
+            </Form.Select>
             </div>
             <div>
                 <label> Team Name:</label>
-            <input
+                {/* <InputGroup className="mb-3">
+        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+        <Form.Control
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </InputGroup> */}
+            <InputGroup className="mb-3">
+            <InputGroup.Text id="basic-addon1">Team Name</InputGroup.Text>
+            <Form.Control
             type="text"
-            name="teamName"
-            value={input.teamName}
+            name="teamNames"
+            value={input.teamNames}
             onChange= {(e)=>handleInput(e)}
             placeholder= "Barcelona fc e.g"
+            aria-describedby="basic-addon1"
+            aria-label="Barcelona fc e.g"
             />
+            </InputGroup>
+            {/* <input
+            type="text"
+            name="teamNames"
+            value={input.teamNames}
+            onChange= {(e)=>handleInput(e)}
+            placeholder= "Barcelona fc e.g"
+            /> */}
             </div>
             <div>
-                <p>position</p>
-                <p>Player Name</p>
-                <p>Remove</p>
+                <ul>Shirt
+                    <li><img src= {blanco} alt="blanco" className= {"blanco" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {naranja} alt="naranja" className= {"naranja" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {violeta} alt="violeta" className= {"violeta" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li ><img  src= {verde} alt="verde" className= {"verde" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {rojo} alt="rojo" className= {"rojo" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {azul} alt="azul" className= {"azul" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {aqua} alt="aqua" className= {"aqua" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {amarillo} alt="amarillo" className= {"amarillo" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+                    <li><img src= {negro} alt="negro" className= {"negro" === active? style.active: ""} onClick={(e)=>handleShirt(e)}/></li>
+
+                    
+
+
+
+                </ul>
             </div>
             {input.formation=== "4-3-3" && <CuatroTresTres setInput={setInput} input={input}/>}
             {input.formation=== "4-4-2" && <CuatroCuatroDos setInput={setInput} input={input}/>}

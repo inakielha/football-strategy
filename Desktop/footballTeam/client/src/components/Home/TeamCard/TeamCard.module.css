@@ -1,0 +1,752 @@
+/* .allContainer {
+    color: red;
+    background: url(../../../../assets/Football_field.svg.png) no-repeat center/cover;
+    background-size: 100%;
+
+} */
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.teamName {
+    color: black;
+    text-transform: capitalize;
+
+}
+
+.infoContainer {
+    background: url(../../../assets/Football_field.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+
+}
+
+.infoContainer :nth-child(n) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+.infoContainer :nth-child(1n) :nth-child(1n) {
+    text-transform: capitalize;
+    max-width: 100px;
+    /* width: 100% ; */
+    margin: 0;
+}
+.imagenArquero{
+    color: aqua;
+}
+.imagen {
+    height: 30%;
+    width: 70%;
+}
+.jugador{
+    color: #000000;
+    
+}
+.position{
+    color: #edc531;
+}
+
+.GK {
+    color: red;
+    position: absolute;
+    top: 3%;
+    left: center;
+}
+
+/* 4-3-3 */
+.cuatroTresTres {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cuatroTresTres .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroTresTres .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroTresTres .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroTresTres .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroTresTres .CM {
+    position: absolute;
+    top: 35%;
+    left: center;
+}
+
+.cuatroTresTres .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.cuatroTresTres .CM2 {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+}
+
+.cuatroTresTres .RW {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+}
+
+.cuatroTresTres .LW {
+    position: absolute;
+    top: 65%;
+    right: 20%;
+}
+
+.cuatroTresTres .ST {
+    position: absolute;
+    top: 75%;
+    left: center;
+}
+
+/* 5-2-2-1 */
+.cincoDosDosUno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.cincoDosDosUno .CB {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+
+}
+
+.cincoDosDosUno .CB1 {
+    position: absolute;
+    top: 20%;
+    left: center;
+}
+
+.cincoDosDosUno .CB2 {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+}
+
+.cincoDosDosUno .RWB {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.cincoDosDosUno .LWB {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.cincoDosDosUno .CM {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.cincoDosDosUno .CM1 {
+    position: absolute;
+    top: 40%;
+    right: 30%;
+}
+
+.cincoDosDosUno .CAM {
+    position: absolute;
+    top: 60%;
+    left: 28%;
+
+}
+
+.cincoDosDosUno .CAM1 {
+    position: absolute;
+    top: 60%;
+    right: 28%;
+}
+
+.cincoDosDosUno .ST {
+    position: absolute;
+    top: 78%;
+    left: center;
+}
+
+/* 5-3-2 */
+.cincoTresDos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cincoTresDos .CB {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+
+}
+
+.cincoTresDos .CB1 {
+    position: absolute;
+    top: 20%;
+    left: center;
+}
+
+.cincoTresDos .CB2 {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    /* margin: 10px; */
+}
+
+.cincoTresDos .RWB {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.cincoTresDos .LWB {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.cincoTresDos .CM {
+    position: absolute;
+    top: 40%;
+    left: center;
+}
+
+.cincoTresDos .CM1 {
+    position: absolute;
+    top: 55%;
+    left: 33%;
+}
+
+.cincoTresDos .CM2 {
+    position: absolute;
+    top: 55%;
+    right: 33%;
+}
+
+.cincoTresDos .ST {
+    position: absolute;
+    top: 77%;
+    right: 33%;
+}
+
+.cincoTresDos .ST1 {
+    position: absolute;
+    top: 77%;
+    left: 33%;
+}
+
+/* 4-4-2 */
+.cuatroCuatroDos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuatroCuatroDos .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroCuatroDos .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroCuatroDos .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroCuatroDos .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroCuatroDos .CM {
+    position: absolute;
+    top: 45%;
+    right: 38%;
+}
+
+.cuatroCuatroDos .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.cuatroCuatroDos .RM {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+}
+
+.cuatroCuatroDos .LM {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+}
+
+.cuatroCuatroDos .ST {
+    position: absolute;
+    top: 77%;
+    right: 33%;
+}
+
+.cuatroCuatroDos .ST1 {
+    position: absolute;
+    top: 77%;
+    left: 33%;
+}
+
+/* 4-2-2-2 */
+.cuatroDosDosDos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuatroDosDosDos .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroDosDosDos .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroDosDosDos .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroDosDosDos .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroDosDosDos .CDM {
+    position: absolute;
+    top: 45%;
+    right: 38%;
+}
+
+.cuatroDosDosDos .CDM1 {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.cuatroDosDosDos .CAM {
+    position: absolute;
+    top: 60%;
+    left: 28%;
+
+}
+
+.cuatroDosDosDos .CAM1 {
+    position: absolute;
+    top: 60%;
+    right: 28%;
+}
+
+.cuatroDosDosDos .ST {
+    position: absolute;
+    top: 80%;
+    right: 33%;
+}
+
+.cuatroDosDosDos .ST1 {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+}
+
+/* 4-2-3-1 */
+.cuatroDosTresUno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuatroDosTresUno .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroDosTresUno .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroDosTresUno .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroDosTresUno .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroDosTresUno .CDM {
+    position: absolute;
+    top: 45%;
+    right: 38%;
+}
+
+.cuatroDosTresUno .CDM1 {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.cuatroDosTresUno .RM {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+}
+
+.cuatroDosTresUno .LM {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+}
+
+.cuatroDosTresUno .CAM {
+    position: absolute;
+    top: 60%;
+    right: center;
+}
+
+.cuatroDosTresUno .ST {
+    position: absolute;
+    top: 80%;
+    right: center;
+}
+
+/* 4-3-2-1 */
+.cuatroTresDosUno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuatroTresDosUno .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroTresDosUno .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroTresDosUno .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroTresDosUno .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroTresDosUno .CM {
+    position: absolute;
+    top: 35%;
+    left: center;
+}
+
+.cuatroTresDosUno .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.cuatroTresDosUno .CM2 {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+}
+
+.cuatroTresDosUno .LF {
+    position: absolute;
+    top: 65%;
+    left: 28%;
+
+}
+
+.cuatroTresDosUno .RF {
+    position: absolute;
+    top: 65%;
+    right: 28%;
+}
+
+.cuatroTresDosUno .ST {
+    position: absolute;
+    top: 77%;
+    left: center;
+}
+
+/* 4-3-1-2 */
+.cuatroTresUnoDos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuatroTresUnoDos .CB {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+}
+
+.cuatroTresUnoDos .CB1 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+}
+
+.cuatroTresUnoDos .RB {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+}
+
+.cuatroTresUnoDos .LB {
+    position: absolute;
+    top: 28%;
+    right: 10%;
+}
+
+.cuatroTresUnoDos .CM {
+    position: absolute;
+    top: 35%;
+    left: center;
+}
+
+.cuatroTresUnoDos .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.cuatroTresUnoDos .CM2 {
+    position: absolute;
+    top: 45%;
+    right: 30%;
+}
+
+.cuatroTresUnoDos .CAM {
+    position: absolute;
+    top: 65%;
+    right: center;
+}
+
+.cuatroTresUnoDos .ST {
+    position: absolute;
+    top: 80%;
+    right: 33%;
+}
+
+.cuatroTresUnoDos .ST1 {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+}
+
+/* 3-4-3 */
+.tresCuatroTres {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tresCuatroTres .CB {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+
+}
+
+.tresCuatroTres .CB1 {
+    position: absolute;
+    top: 20%;
+    left: center;
+}
+
+.tresCuatroTres .CB2 {
+    position: absolute;
+    top: 20%;
+    right: 28%;
+}
+
+.tresCuatroTres .CM {
+    position: absolute;
+    top: 45%;
+    right: 38%;
+}
+
+.tresCuatroTres .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.tresCuatroTres .RM {
+    position: absolute;
+    top: 48%;
+    left: 15%;
+}
+
+.tresCuatroTres .LM {
+    position: absolute;
+    top: 48%;
+    right: 15%;
+}
+
+.tresCuatroTres .RW {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+}
+
+.tresCuatroTres .LW {
+    position: absolute;
+    top: 65%;
+    right: 20%;
+}
+
+.tresCuatroTres .ST {
+    position: absolute;
+    top: 75%;
+}
+
+/* 3-4-1-2 */
+.tresCuatroUnoDos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tresCuatroUnoDos .CB {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+
+}
+
+.tresCuatroUnoDos .CB1 {
+    position: absolute;
+    top: 20%;
+    left: center;
+}
+
+.tresCuatroUnoDos .CB2 {
+    position: absolute;
+    top: 20%;
+    right: 28%;
+}
+
+.tresCuatroUnoDos .CM {
+    position: absolute;
+    top: 45%;
+    right: 38%;
+}
+
+.tresCuatroUnoDos .CM1 {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.tresCuatroUnoDos .RM {
+    position: absolute;
+    top: 48%;
+    left: 15%;
+}
+
+.tresCuatroUnoDos .LM {
+    position: absolute;
+    top: 48%;
+    right: 15%;
+}
+
+.tresCuatroUnoDos .CAM {
+    position: absolute;
+    top: 65%;
+    right: center;
+}
+
+.tresCuatroUnoDos .ST {
+    position: absolute;
+    top: 80%;
+    right: 33%;
+}
+
+.tresCuatroUnoDos .ST1 {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+}

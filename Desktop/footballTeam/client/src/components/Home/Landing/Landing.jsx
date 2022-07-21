@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { getTeams } from "../../../redux/action";
 import TeamCard from "../TeamCard/TeamCard";
+import style from "./Landing.module.css"
 
 
 export default function Landing(){
@@ -12,11 +13,11 @@ export default function Landing(){
     dispatch(getTeams())
     },[])
     return (
-        <div>
+        <div className={style.contenedor}>
             {allTeams?.ok && allTeams.allTeams.map((team)=>{
                 return(
                     <div key={team._id}>   
-                        <TeamCard players={team.players} teamName={team.teamName} formation={team.formation}/>
+                        <TeamCard players={team.players} teamName={team.teamName} shirt={team.shirt} formation={team.formation}/>
                     </div>
                 )
             })}

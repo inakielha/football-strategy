@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.active{
+    border: 3px solid black;
+    /* border-radius: 5vh; */
+    background-color: #b7e4c7;
+}

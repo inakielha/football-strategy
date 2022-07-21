@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Landing from './components/Home/Landing/Landing';
-import Navbar from './components/FirstPage/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import CreateTeam from './components/CreateTeam/CreateTeam';
 import Articles from './components/Articles/Articles';
 import About from './components/About/About';
