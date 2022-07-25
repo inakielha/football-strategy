@@ -1,10 +1,28 @@
-ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+.container{
+    margin-top: 8%;
+}
+
+.listContainer{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 .active{
     border: 3px solid black;
     /* border-radius: 5vh; */
     background-color: #b7e4c7;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+button{
+    /* border-radius: 5vh; */
+    width: 80%;
+    background-color: black;
+    color: white;
+}
+button:hover{
+    color: gold;
 }

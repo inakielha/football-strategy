@@ -1,4 +1,4 @@
-import { CREATE_TEAM, GET_TEAMS } from "./action";
+import { CREATE_TEAM, GET_TEAMS, SEARCH_TEAM } from "./action";
 
 
 
@@ -18,10 +18,15 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 team: action.payload
             }
-            case CREATE_TEAM:
+        case CREATE_TEAM:
             return {
                 ...state,
                 createResponse: action.payload
+            }
+        case SEARCH_TEAM:
+            return {
+                ...state,
+                team: action.payload
             }
     }
 
