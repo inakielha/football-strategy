@@ -1,4 +1,4 @@
-const {Schema,model} = require ("mongoose");
+const { Schema, model } = require("mongoose");
 
 const teamSchema = new Schema({
     teamName: {
@@ -8,7 +8,7 @@ const teamSchema = new Schema({
     },
     amountOfPlayers: {
         type: String,
-        enum: ["5","11"],
+        enum: ["5", "11"],
         default: "11"
     },
     description: {
@@ -16,12 +16,15 @@ const teamSchema = new Schema({
         minLength: 10,
         maxLength: 100
     },
-    formation:{
+    formation: {
         type: String,
     },
     players: {
         type: [Object]
+    },
+    shirt: {
+        type: String,
     }
 })
 
-module.exports = model("team",teamSchema);
+module.exports = model("team", teamSchema);

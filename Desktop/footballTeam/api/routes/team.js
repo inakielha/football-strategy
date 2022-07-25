@@ -1,10 +1,14 @@
 const {Router} = require ("express");
 const {check} = require ("express-validator");
-const {createTeam, deleteTeam, updateTeam, getTeams} = require("./../controllers/team")
+const {createTeam, deleteTeam, updateTeam, getTeams, searchTeam} = require("./../controllers/team")
 const Team = require("./../models/Team");
 
 const router = Router();
 
+router.get(
+    "/teamSearch",
+    searchTeam
+)
 router.get(
     "/",
     getTeams
@@ -25,8 +29,8 @@ router.delete(
     "/",
     [
     check("name","The team name is required").not().isEmpty(),  
-    ],
-    deleteTeam
+],
+deleteTeam
 )
 router.put(
     "/",

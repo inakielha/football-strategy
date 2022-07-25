@@ -2,10 +2,22 @@ const mongoose = require("mongoose");
 const Team = require("./../models/Team")
 
 const createTeam = async (req,res) =>{
-    const { teamName, formation,description, one,two,three,four, five, six, seven, eight, nine, ten, eleven} = req.body;
+    const { teamNames, formation,shirt, one,two,three,four, five, six, seven, eight, nine, ten, eleven} = req.body;
     try {
-        let players = [one,two,three,four,five,six,seven,eight,nine,ten,eleven]
-        const newTeam = new Team({teamName,description, players,formation})
+        let teamName = teamNames.toLowerCase()
+         one.name = one.name.toLowerCase()
+         two.name = two.name.toLowerCase()
+         three.name = three.name.toLowerCase()
+         four.name = four.name.toLowerCase()
+         five.name = five.name.toLowerCase()
+         six.name = six.name.toLowerCase()
+         seven.name = seven.name.toLowerCase()
+         eight.name = eight.name.toLowerCase()
+         nine.name = nine.name.toLowerCase()
+         ten.name = ten.name.toLowerCase()
+         eleven.name = eleven.name.toLowerCase()
+         players = [one,two,three,four,five,six,seven,eight,nine,ten,eleven]
+        const newTeam = new Team({teamName,shirt, players,formation})
         await newTeam.save();
         res.status(201).json({
             ok: true,
@@ -13,6 +25,7 @@ const createTeam = async (req,res) =>{
                 teamName: teamName,
                 players: players,
                 description: description,
+                shirt,
                 formation
             }
         })
@@ -66,6 +79,20 @@ const getTeams = async (req,res) => {
         res.status(400).json("error flaco")
     }
 }
+const searchTeam = async (req,res)=> {
+    const {teamName} = req.query;
+    try{
+        let teamNameLowercase = teamName.toLowerCase()
+        const allTeam = await Team.find({})
+       const result = allTeam.filter(equipo=> !equipo.teamName.indexOf(teamNameLowercase)
+        )
+        res.status(200).json({ok:true,allTeams:result})
+
+    } catch (e){
+        console.log(e)
+        res.status(400).json(e)
+    }
+}
 
 
 
@@ -73,5 +100,6 @@ module.exports = {
     createTeam,
     deleteTeam,
     updateTeam,
-    getTeams
+    getTeams,
+    searchTeam
 }
